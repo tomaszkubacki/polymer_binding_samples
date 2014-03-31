@@ -3,8 +3,7 @@ import 'package:polymer/polymer.dart';
 
 @CustomTag('tbody-repeat')
 class TbodyRepeat extends PolymerElement {
-  @published int count = 0;
-
+  
   TbodyRepeat.created() : super.created() {
   }
   
@@ -12,10 +11,7 @@ class TbodyRepeat extends PolymerElement {
                                                new Item("B item","B item description"),
                                                new Item("C item","C item description"),
                                                new Item("D item","D item description")]);
- 
 }
-
-
 
 class Item extends Observable {
   
