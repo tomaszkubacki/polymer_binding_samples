@@ -7,12 +7,13 @@ class TbodyRepeat extends PolymerElement {
    TbodyRepeat.created() : super.created() {
    }
 
-   @observable List<List<Item>> items = toObservable([
-      [new Item("A item","A item description"), new Item("A1 item","A1 item description"), new Item("A2 item","A2 item description")],
-      [new Item("B item","B item description"), new Item("B2 item","B2 item description"), new Item("B2 item","B2 item description")],
-      [new Item("C item","C item description")],
-      [new Item("D item","D item description")]
-   ]);
+   @observable List<List<Item>> items =
+     toObservable([
+       toObservable([new Item("A item","A item description"), new Item("A1 item","A1 item description"), new Item("A2 item","A2 item description")]),
+       toObservable([new Item("B item","B item description"), new Item("B2 item","B2 item description"), new Item("B2 item","B2 item description")]),
+       toObservable([new Item("C item","C item description")]),
+       toObservable([new Item("D item","D item description")])
+    ]);
 
    var timer = null;
 
