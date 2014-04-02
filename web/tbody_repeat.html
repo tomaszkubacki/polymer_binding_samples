@@ -1,16 +1,14 @@
 <polymer-element name="tbody-repeat"> <template>
 
 <table>
-  <tbody template repeat="{{item in items}}">
-    <tr>
-      <td>{{item.name}}</td>
-    </tr>
-
-    <tr>
-      <td>{{item.description}}</td>
-    </tr>
-  </tbody>
-
+   <tbody template repeat="{{list in items}}">
+      <tr>
+         <template repeat="{{item in list}}">
+         <td>{{item.name}}</td>
+         <td>{{item.description}}</td>
+         </template>
+      </tr>
+   </tbody>
 </table>
 
 </template> <script type="application/dart" src="tbody_repeat.dart"></script> </polymer-element>
